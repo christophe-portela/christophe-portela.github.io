@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+@import url("reset.css");
+
+:root {
+  --orange: #E6B004;
+  --dark-golden: #CB9A04;
+  --dark-olive: #433725;
+  --gray: #9F9CA0;
+  --brown: #8F6812;
+
+  --border-width: 12px;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  color: var(--dark-olive);
+  background-color: var(--orange);
+  background: url("../images/joanna-kosinska-1_CMoFsPfso-unsplash.jpg") no-repeat left top;
+  background-size: cover;
+}
+
+@media (max-width: 991.98px) and (orientation: portrait) {
+  body {
+    font-size: 12px;
+    background-position: -200px top
+  }
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--brown);
+}
+
+p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  min-height: calc(100vh - 24px);
+  border: var(--border-width) solid var(--brown);
+}
+
+.header {
+  grid-area: 1 / 1 / 2 / 4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  font-size: 2em;
+  padding-right: 64px;
+}
+
+.menu li {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.menu li:not(:last-child) {
+  margin-right: 48px;
+}
+
+.left {
+  grid-area: 4 / 1 / 6 / 2;
+}
+
+.main {
+  grid-area: 3 / 2 / 6 / 3;
+}
+
+.main h1 {
+  text-align: right;
+}
+
+.right {
+  grid-area: 2 / 3 / 6 / 4;
+}
+
+@media (max-width: 991.98px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    min-height: calc(100vh - 56px);
+  }
+
+  .menu {
+    padding: 32px 0;
+  }
+
+  .header {
+    order: 1;
+  }
+
+  .main {
+    order: 2;
+    flex-grow: 1;
+  }
+
+  .left {
+    order: 3;
+  }
+
+  .right {
+    order: 4;
+  }
+}
+
+.img-text {
+  display: flex;
+  align-items: center;
+}
+
+.img-text img {
+  margin-right: 32px;
+  border-radius: 50%;
+}
+
+@media (max-width: 991.98px) and (orientation: portrait) {
+  .img-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-text img {
+    margin-right: 0;
+    margin-bottom: 32px;
+  }
+}
