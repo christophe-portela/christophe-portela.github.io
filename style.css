@@ -1,9 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
 .parent {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 8px;
   grid-row-gap: 8px;
+  min-height: 100vh;
 }
 
 .sidebar {
